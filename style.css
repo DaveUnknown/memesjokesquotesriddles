@@ -169,6 +169,7 @@ body {
     padding: 1rem;
     scrollbar-color: rgba(59, 63, 132, 0.35) rgba(255, 166, 0, 0);
     overflow: auto;
+    margin-top: 1rem;
 }
 
 .prompt {

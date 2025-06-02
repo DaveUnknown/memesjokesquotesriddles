@@ -1,0 +1,206 @@
+/* RESET */
+
+:root {
+    /* 1. Use a more-intuitive box-sizing model */
+    box-sizing: border-box;
+    /* 2. Remove default margin */
+    margin: 0;
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    /* 5. Improve media defaults */
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    /* 6. Inherit fonts for form controls */
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* 7. Avoid text overflows */
+    overflow-wrap: break-word;
+}
+
+p {
+    /* 8. Improve line wrapping */
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+#root,
+#__next {
+    /* 9. Create a root stacking context */
+    isolation: isolate;
+}
+
+/* =============================== */
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 1.8rem;
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+}
+
+body {
+    background-color: #191b38;
+    height: 100%;
+    padding: 8rem;
+    overflow: hidden;
+}
+
+.general-font-settings {
+    font-family: monospace;
+    color: #ffb66d;
+}
+
+.split {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    bottom: 10px;
+    padding-left: 80px;
+    overflow-x: hidden;
+}
+
+.left {
+    left: 0;
+    width: 60.1%;
+    overflow-y: auto;
+    scrollbar-color: rgba(59, 63, 132, 0.35) rgba(255, 166, 0, 0);
+    scrollbar-width: 5px;
+    padding-right: 1.1rem;
+}
+
+.right {
+    right: 0;
+    width: 40%;
+    border-left: 2px dashed #ffffff;
+}
+
+.action-button-disabled {
+    background-color: rgb(116, 206, 88) !important;
+    border: 2px solid rgb(143, 255, 109) !important;
+    color: #ffffff;
+}
+
+.action-button {
+    display: block;
+    font-family: monospace;
+    font-size: 18px;
+    background: none;
+    border: 2px solid #ffc56d;
+    border-radius: 5px;
+    width: 12rem;
+    margin-bottom: 2rem;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: #ce9f58;
+    color: #ffffff;
+}
+
+.action-button:active {
+    background-color: #ffc56d;
+    color: #ffffff;
+    transform: scale(0.98);
+}
+
+.display-output {
+    display: block;
+    font-family: monospace;
+    font-size: 18px;
+    color: #a3a8ff;
+    margin-bottom: 15px;
+    z-index: 9999;
+}
+
+#display-meme {
+    display: none;
+    border: 2px solid #ffc56d;
+    border-radius: 5px;
+    width: 35rem;
+}
+
+.terminal {
+    background-color: #000000;
+    border: 2px solid #ffc56d;
+    border-radius: 5px;
+    width: 70%;
+    height: 45%;
+    padding: 1rem;
+    scrollbar-color: rgba(59, 63, 132, 0.35) rgba(255, 166, 0, 0);
+    overflow: auto;
+    margin-top: 3rem;
+}
+
+.prompt {
+    color: #3dca0e;
+    max-width: fit-content;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.blinker {
+    display: inline-block;
+    width: 0.15rem;
+    height: 0.8rem;
+    padding-top: 1rem;
+    margin-bottom: -0.1rem;
+    background-color: #3dca0e;
+    animation: blinker 1s steps(1, end) infinite;
+}
+
+@keyframes blinker {
+    0%, 100% {
+        background-color: #3dca0e;
+    }
+    50% {
+        background-color: transparent;
+    }
+}

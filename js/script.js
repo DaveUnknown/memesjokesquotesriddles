@@ -48,7 +48,6 @@ const outputs = [memeImage, jokeText, quoteText, riddleText];
 outputs.forEach((element, index) => {
     let referenceNode = displaySec.children[(index * 2) + 1]; // Insert after each label
     displaySec.insertBefore(element, referenceNode);
-    // (Optional) Configure medium zoom package here if needed
 });
 
 // Generic API request function with optional callback
